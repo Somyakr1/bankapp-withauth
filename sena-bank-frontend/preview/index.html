@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sena Bank | Interactive Preview</title>
+  <style>
+    :root {
+      --bg: #eff4ff;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #1d4ed8;
+      --primary-2: #1e40af;
+      --danger: #b91c1c;
+      --border: #dbeafe;
+      --shadow: 0 12px 30px rgba(30, 64, 175, 0.14);
+    }
+
+    * { box-sizing: border-box; font-family: Inter, Segoe UI, Arial, sans-serif; }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 10% 10%, #dbeafe 0%, #eff4ff 50%, #e2e8f0 100%);
+      color: var(--text);
+    }
+
+    .app-shell { min-height: 100vh; }
+
+    header {
+      display: none;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 70%, #2563eb 100%);
+      color: #fff;
+      padding: 14px 22px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, .35);
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .brand-dot { width: 10px; height: 10px; border-radius: 50%; background: #93c5fd; box-shadow: 0 0 12px #bfdbfe; }
+    .brand-text { font-size: 24px; font-weight: 800; }
+
+    .btn {
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 13px;
+      cursor: pointer;
+      font-weight: 700;
+      background: var(--primary);
+      color: #fff;
+      transition: transform .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.secondary { background: #334155; }
+    .btn.danger { background: var(--danger); }
+    .btn.small { padding: 8px 10px; font-size: 13px; }
+
+    .login-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+    }
+
+    .login-card {
+      width: min(460px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .login-card h1 { margin: 0 0 6px; font-size: 28px; }
+    .subtitle { margin: 0 0 16px; color: var(--muted); }
+
+    label { display: block; font-size: 13px; font-weight: 700; color: #475569; margin: 8px 0 6px; }
+    input, select {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 10px 11px;
+      background: #f8fafc;
+      margin-bottom: 6px;
+    }
+
+    .inline-error {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+      border-radius: 10px;
+      padding: 8px 10px;
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      display: none;
+    }
+
+    .hint { margin-top: 10px; color: #64748b; font-size: 12px; }
+
+    .dashboard-page {
+      display: none;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .role-badge {
+      background: #dbeafe;
+      color: #1e3a8a;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 6px 10px;
+    }
+
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 { margin-top: 0; font-size: 20px; margin-bottom: 10px; }
+
+    .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+
+    .welcome {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #60a5fa 100%);
+      color: #fff;
+      border-radius: 14px;
+      padding: 14px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .welcome p { margin: 4px 0 0; color: #dbeafe; }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 999;
+      backdrop-filter: blur(3px);
+    }
+
+    .modal {
+      width: min(920px, 100%);
+      max-height: 80vh;
+      overflow: auto;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, .35);
+      border: 1px solid #c7d2fe;
+    }
+
+    .modal-head {
+      padding: 16px 18px;
+      border-bottom: 1px solid #e2e8f0;
+      background: linear-gradient(90deg, #eef2ff, #f8fafc);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-title { margin: 0; font-size: 22px; color: #1e3a8a; }
+    .modal-time { color: #64748b; font-size: 12px; }
+
+    .modal-body { padding: 18px; font-size: 17px; line-height: 1.75; color: #1f2937; }
+    .modal-body ul { margin: 8px 0 0 0; padding-left: 22px; }
+    .modal-body li { margin-bottom: 6px; }
+    .success-line { color: #166534; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header id="appHeader">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Sena Bank</span>
+      </div>
+      <button class="btn secondary small" onclick="logout()">Logout</button>
+    </header>
+
+    <main id="loginPage" class="login-page">
+      <section class="login-card">
+        <h1>Welcome to Sena Bank</h1>
+        <p class="subtitle">Sign in to continue.</p>
+
+        <label for="username">User Name</label>
+        <input id="username" placeholder="Enter username" value="clerk" />
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" value="1234" />
+
+        <button class="btn" onclick="login()">Login</button>
+
+        <div class="inline-error" id="loginError">Invalid info entered.</div>
+
+        <p class="hint">Preview credentials: use username <strong>clerk</strong> for Clerk Dashboard or <strong>manager</strong> for Manager Dashboard.</p>
+      </section>
+    </main>
+
+    <main id="dashboardPage" class="dashboard-page">
+      <section class="welcome">
+        <h2 id="dashboardTitle" style="margin:0;">Dashboard</h2>
+        <p id="dashboardSubtitle">Actions shown below call backend functions in the real Angular app.</p>
+      </section>
+
+      <div class="topbar">
+        <span class="role-badge" id="roleBadge">ROLE</span>
+        <div class="row" id="roleSwitch" style="display:none;">
+          <button class="btn small" onclick="renderClerk()">Show Clerk Preview</button>
+          <button class="btn small" onclick="renderManager()">Show Manager Preview</button>
+        </div>
+      </div>
+
+      <div id="clerkSection" style="display:none;">
+        <div class="grid">
+          <section class="card">
+            <h3>Account Queries</h3>
+            <label>Account Number</label><input id="clerkAccountId" value="1001" />
+            <div class="row">
+              <button class="btn small" onclick="runAction('All Accounts', ['Showing all accounts available in Sena Bank.', 'Total Accounts: 5', 'First account: #1001 - Ava - Balance ₹5,100'])">All Accounts</button>
+              <button class="btn small" onclick="runAccountAction('Account Details', 'clerkAccountId')">By Account</button>
+              <button class="btn small" onclick="runAccountAction('Account With Transactions', 'clerkAccountId')">With Transactions</button>
+              <button class="btn small" onclick="runAction('Account Summary', ['Total Accounts: 5', 'Total Balance Across Bank: ₹42,000'])">Summary</button>
+              <button class="btn small" onclick="runAccountAction('Summary by Account Number', 'clerkAccountId')">Summary by Account</button>
+            </div>
+          </section>
+
+          <section class="card">
+            <h3>Transactions</h3>
+            <label>Deposit Account</label><input id="cDepAcc" value="1001" />
+            <label>Amount</label><input id="cDepAmt" value="500" />
+            <button class="btn small" onclick="runAmountAction('Deposit Processed', 'cDepAcc', 'cDepAmt')">Deposit</button>
+
+            <label>Withdraw Account</label><input id="cWAcc" value="1001" />
+            <label>Amount</label><input id="cWAmt" value="300" />
+            <button class="btn small" onclick="runAmountAction('Withdrawal Processed', 'cWAcc', 'cWAmt')">Withdraw</button>
+
+            <label>From Account</label><input id="cFrom" value="1001" />
+            <label>To Account</label><input id="cTo" value="1002" />
+            <label>Amount</label><input id="cTAmt" value="200" />
+            <button class="btn small" onclick="runTransferAction()">Transfer</button>
+          </section>
+        </div>
+      </div>
+
+      <div id="managerSection" style="display:none;">
+        <div class="grid">
+          <section class="card">
+            <h3>Create Clerk + Accounts</h3>
+            <label>New Clerk Username</label><input id="mUser" value="newclerk" />
+            <label>Password</label><input id="mPass" type="password" value="1234" />
+            <button class="btn small" onclick="runAction('Clerk Created', ['New clerk account has been created successfully.', 'Username: ' + document.getElementById('mUser').value])">Create Clerk</button>
+
+            <hr />
+            <label>Name</label><input id="mName" value="John Doe" />
+            <label>Balance</label><input id="mBal" value="10000" />
+            <label>Email</label><input id="mEmail" value="john@email.com" />
+            <label>Phone</label><input id="mPhone" value="5551231234" />
+            <button class="btn small" onclick="runAction('Account Added', ['Account for ' + document.getElementById('mName').value + ' has been added.', 'Opening Balance: ₹' + Number(document.getElementById('mBal').value).toLocaleString()])">Add Account</button>
+            <label>Delete Account Number</label><input id="mDel" value="1001" />
+            <button class="btn small danger" onclick="runAccountAction('Account Deleted', 'mDel')">Delete Account</button>
+          </section>
+
+          <section class="card">
+            <h3>Manager Transaction Controls</h3>
+            <label>Transaction ID</label><input id="mTxId" value="9001" />
+            <label>Account Number for Tx Count</label><input id="mCountId" value="1001" />
+            <div class="row">
+              <button class="btn small" onclick="runAction('All Transactions', ['Showing latest transactions across all accounts.', 'Transaction #1: Deposit ₹500', 'Transaction #2: Withdraw ₹100'])">All Transactions</button>
+              <button class="btn small" onclick="runTxById()">Transaction By ID</button>
+              <button class="btn small" onclick="runAction('Transaction Count', ['Account #' + Number(document.getElementById('mCountId').value) + ' has total 14 transactions.'])">Transaction Count</button>
+            </div>
+            <label>Approval</label>
+            <select id="mApprove"><option value="true">Approve</option><option value="false">Reject</option></select>
+            <button class="btn small" onclick="runAction('Approval Status Updated', ['Transaction #' + Number(document.getElementById('mTxId').value) + ' decision saved.', 'Decision: ' + (document.getElementById('mApprove').value === 'true' ? 'Approved' : 'Rejected')])">Submit Approval</button>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div id="outputModal" class="modal-overlay" onclick="closeModal(event)">
+    <section class="modal">
+      <div class="modal-head">
+        <div>
+          <h3 id="modalTitle" class="modal-title">Action Result</h3>
+          <div id="modalTime" class="modal-time"></div>
+        </div>
+        <button class="btn secondary small" onclick="closeModal()">Close</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </section>
+  </div>
+
+  <script>
+    function showModal(title, lines) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalTime').textContent = `Updated at ${new Date().toLocaleTimeString()}`;
+      const body = document.getElementById('modalBody');
+      body.innerHTML = '<div class="success-line">Action completed successfully.</div><ul>' + lines.map((l) => `<li>${l}</li>`).join('') + '</ul>';
+      document.getElementById('outputModal').style.display = 'flex';
+    }
+
+    function closeModal(e) {
+      if (!e || e.target.id === 'outputModal') {
+        document.getElementById('outputModal').style.display = 'none';
+      }
+    }
+
+    function invalidOutput() {
+      showModal('Invalid Information', ['Invalid info entered.', 'Please verify account number and amount values.']);
+    }
+
+    function login() {
+      const username = (document.getElementById('username').value || '').trim().toLowerCase();
+      const password = (document.getElementById('password').value || '').trim();
+      const err = document.getElementById('loginError');
+
+      if (!username || !password) {
+        err.style.display = 'block';
+        return;
+      }
+
+      if (username === 'clerk') {
+        err.style.display = 'none';
+        enterDashboard('ROLE_CLERK');
+      } else if (username === 'manager' || username === 'mgr') {
+        err.style.display = 'none';
+        enterDashboard('ROLE_MGR');
+      } else {
+        err.style.display = 'block';
+      }
+    }
+
+    function enterDashboard(role) {
+      document.getElementById('loginPage').style.display = 'none';
+      document.getElementById('dashboardPage').style.display = 'block';
+      document.getElementById('appHeader').style.display = 'flex';
+      document.getElementById('roleBadge').textContent = role;
+      document.getElementById('roleSwitch').style.display = 'inline-flex';
+
+      if (role === 'ROLE_MGR') {
+        renderManager();
+      } else {
+        renderClerk();
+      }
+
+      showModal('Login Successful', [
+        `Authenticated as ${role}.`,
+        role === 'ROLE_MGR' ? 'Redirected to Manager Dashboard.' : 'Redirected to Clerk Dashboard.'
+      ]);
+    }
+
+    function renderClerk() {
+      document.getElementById('dashboardTitle').textContent = 'Clerk Dashboard';
+      document.getElementById('dashboardSubtitle').textContent = 'Clerk actions: account queries, deposit, withdraw, transfer.';
+      document.getElementById('roleBadge').textContent = 'ROLE_CLERK';
+      document.getElementById('clerkSection').style.display = 'block';
+      document.getElementById('managerSection').style.display = 'none';
+    }
+
+    function renderManager() {
+      document.getElementById('dashboardTitle').textContent = 'Manager Dashboard';
+      document.getElementById('dashboardSubtitle').textContent = 'Manager actions: clerk creation, account management, approvals and transaction controls.';
+      document.getElementById('roleBadge').textContent = 'ROLE_MGR';
+      document.getElementById('clerkSection').style.display = 'none';
+      document.getElementById('managerSection').style.display = 'block';
+    }
+
+    function logout() {
+      document.getElementById('dashboardPage').style.display = 'none';
+      document.getElementById('appHeader').style.display = 'none';
+      document.getElementById('loginPage').style.display = 'grid';
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('loginError').style.display = 'none';
+      document.getElementById('outputModal').style.display = 'none';
+    }
+
+    function runAction(title, lines) {
+      showModal(title, lines);
+    }
+
+    function getNum(id) {
+      return Number(document.getElementById(id).value);
+    }
+
+    function runAccountAction(title, idField) {
+      const id = getNum(idField);
+      if (!id || id <= 0) return invalidOutput();
+      runAction(title, [
+        `Account Number: ${id}`,
+        'Request validated successfully.',
+        'Data loaded from backend endpoint in real application.'
+      ]);
+    }
+
+    function runAmountAction(title, accField, amtField) {
+      const accountId = getNum(accField);
+      const amount = getNum(amtField);
+      if (!accountId || accountId <= 0 || !amount || amount <= 0) return invalidOutput();
+      runAction(title, [
+        `Account Number: ${accountId}`,
+        `Amount: ₹${amount.toLocaleString()}`,
+        'Transaction status: SUCCESS'
+      ]);
+    }
+
+    function runTransferAction() {
+      const fromAccountId = getNum('cFrom');
+      const toAccountId = getNum('cTo');
+      const amount = getNum('cTAmt');
+      if (!fromAccountId || !toAccountId || fromAccountId <= 0 || toAccountId <= 0 || amount <= 0) return invalidOutput();
+      runAction('Transfer Successful', [
+        `From Account: ${fromAccountId}`,
+        `To Account: ${toAccountId}`,
+        `Transferred Amount: ₹${amount.toLocaleString()}`,
+        'Fund transfer completed successfully.'
+      ]);
+    }
+
+    function runTxById() {
+      const id = getNum('mTxId');
+      if (!id || id <= 0) return invalidOutput();
+      runAction('Transaction Details', [
+        `Transaction ID: ${id}`,
+        'Type: WITHDRAW',
+        'Amount: ₹250',
+        'Current Status: PENDING_APPROVAL'
+      ]);
+    }
+  </script>
+</body>
+</html>
