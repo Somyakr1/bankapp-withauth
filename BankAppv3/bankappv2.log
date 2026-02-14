@@ -1,0 +1,307 @@
+2026-02-14T21:06:01.978+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T21:06:01.978+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T21:06:02.310+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T21:06:02.370+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2026-02-14T21:06:02.557+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T21:06:02.559+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T21:06:02.559+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T21:06:02.580+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T21:06:02.580+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 600 ms
+2026-02-14T21:06:02.690+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T21:06:02.691+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2026-02-14T21:06:02.715+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection com.mysql.cj.jdbc.ConnectionImpl@660c7b11
+2026-02-14T21:06:02.716+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2026-02-14T21:06:02.827+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:06:03.137+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T21:06:03.175+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T21:06:03.250+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T21:06:03.378+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T21:06:03.455+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T21:06:03.525+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T21:06:03.555+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T21:06:03.683+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T21:06:03.705+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T21:06:03.715+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 1.773 seconds (process running for 11433.722)
+2026-02-14T21:06:03.719+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-14T21:13:15.731+05:30  INFO 7568 --- [BankAppv2] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-14T21:13:15.735+05:30  INFO 7568 --- [BankAppv2] [Thread-70] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14T21:13:15.807+05:30  INFO 7568 --- [BankAppv2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-14T21:13:15.812+05:30  INFO 7568 --- [BankAppv2] [Thread-70] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:13:15.813+05:30  INFO 7568 --- [BankAppv2] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2026-02-14T21:13:15.824+05:30  INFO 7568 --- [BankAppv2] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2026-02-14T21:13:16.002+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T21:13:16.002+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T21:13:16.340+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T21:13:16.378+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2026-02-14T21:13:16.560+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T21:13:16.561+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T21:13:16.561+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T21:13:16.579+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T21:13:16.579+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 575 ms
+2026-02-14T21:13:16.672+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T21:13:16.673+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2026-02-14T21:13:16.695+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b31b221
+2026-02-14T21:13:16.695+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2026-02-14T21:13:16.807+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:13:17.089+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T21:13:17.125+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T21:13:17.194+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T21:13:17.321+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T21:13:17.392+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T21:13:17.467+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T21:13:17.503+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T21:13:17.650+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T21:13:17.676+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T21:13:17.688+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 1.722 seconds (process running for 11867.695)
+2026-02-14T21:13:17.691+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-14T21:13:54.066+05:30  INFO 7568 --- [BankAppv2] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-14T21:13:54.068+05:30  INFO 7568 --- [BankAppv2] [Thread-74] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14T21:13:54.151+05:30  INFO 7568 --- [BankAppv2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-14T21:13:54.154+05:30  INFO 7568 --- [BankAppv2] [Thread-74] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:13:54.155+05:30  INFO 7568 --- [BankAppv2] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2026-02-14T21:13:54.165+05:30  INFO 7568 --- [BankAppv2] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2026-02-14T21:13:54.343+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T21:13:54.344+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T21:13:54.687+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T21:13:54.738+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2026-02-14T21:13:54.944+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T21:13:54.945+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T21:13:54.945+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T21:13:54.965+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T21:13:54.965+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 619 ms
+2026-02-14T21:13:55.063+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T21:13:55.064+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2026-02-14T21:13:55.089+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6ecd092
+2026-02-14T21:13:55.089+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2026-02-14T21:13:55.202+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:13:55.502+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T21:13:55.544+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T21:13:55.626+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T21:13:55.752+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T21:13:55.836+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T21:13:55.925+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T21:13:55.952+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T21:13:56.085+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T21:13:56.110+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T21:13:56.122+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 1.815 seconds (process running for 11906.128)
+2026-02-14T21:13:56.126+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-14T21:17:31.307+05:30  INFO 7568 --- [BankAppv2] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-14T21:17:31.313+05:30  INFO 7568 --- [BankAppv2] [Thread-78] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14T21:17:31.390+05:30  INFO 7568 --- [BankAppv2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-14T21:17:31.395+05:30  INFO 7568 --- [BankAppv2] [Thread-78] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:17:31.395+05:30  INFO 7568 --- [BankAppv2] [Thread-78] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2026-02-14T21:17:31.404+05:30  INFO 7568 --- [BankAppv2] [Thread-78] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2026-02-14T21:17:31.570+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T21:17:31.570+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T21:17:31.911+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T21:17:31.959+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+2026-02-14T21:17:32.188+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T21:17:32.189+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T21:17:32.189+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T21:17:32.214+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T21:17:32.215+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 642 ms
+2026-02-14T21:17:32.310+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T21:17:32.312+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2026-02-14T21:17:32.334+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection com.mysql.cj.jdbc.ConnectionImpl@140f7d90
+2026-02-14T21:17:32.335+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2026-02-14T21:17:32.436+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:17:32.735+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T21:17:32.776+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T21:17:32.851+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T21:17:32.969+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T21:17:33.045+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T21:17:33.111+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T21:17:33.139+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T21:17:33.274+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T21:17:33.296+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T21:17:33.304+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 1.764 seconds (process running for 12123.311)
+2026-02-14T21:17:33.307+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-14T21:19:57.026+05:30  INFO 7568 --- [BankAppv2] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-14T21:19:57.029+05:30  INFO 7568 --- [BankAppv2] [Thread-82] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14T21:19:57.100+05:30  INFO 7568 --- [BankAppv2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-14T21:19:57.104+05:30  INFO 7568 --- [BankAppv2] [Thread-82] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:19:57.105+05:30  INFO 7568 --- [BankAppv2] [Thread-82] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2026-02-14T21:19:57.111+05:30  INFO 7568 --- [BankAppv2] [Thread-82] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2026-02-14T21:19:57.275+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T21:19:57.276+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T21:19:57.591+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T21:19:57.636+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2026-02-14T21:19:57.841+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T21:19:57.842+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T21:19:57.842+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T21:19:57.869+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T21:19:57.869+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 591 ms
+2026-02-14T21:19:57.983+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T21:19:57.986+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2026-02-14T21:19:58.008+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77894464
+2026-02-14T21:19:58.009+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2026-02-14T21:19:58.161+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:19:58.458+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T21:19:58.490+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T21:19:58.573+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T21:19:58.693+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T21:19:58.778+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T21:19:58.846+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T21:19:58.877+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T21:19:58.982+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T21:19:59.004+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T21:19:59.013+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 1.774 seconds (process running for 12269.02)
+2026-02-14T21:19:59.017+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-14T21:21:52.759+05:30  INFO 7568 --- [BankAppv2] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-14T21:21:52.763+05:30  INFO 7568 --- [BankAppv2] [Thread-86] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14T21:21:52.837+05:30  INFO 7568 --- [BankAppv2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-14T21:21:52.843+05:30  INFO 7568 --- [BankAppv2] [Thread-86] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:21:52.844+05:30  INFO 7568 --- [BankAppv2] [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2026-02-14T21:21:52.852+05:30  INFO 7568 --- [BankAppv2] [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
+2026-02-14T21:21:53.024+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T21:21:53.024+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T21:21:53.340+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T21:21:53.380+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+2026-02-14T21:21:53.581+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T21:21:53.581+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T21:21:53.583+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T21:21:53.601+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T21:21:53.601+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 574 ms
+2026-02-14T21:21:53.688+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T21:21:53.689+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2026-02-14T21:21:53.714+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43cc2c7b
+2026-02-14T21:21:53.714+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2026-02-14T21:21:53.823+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T21:21:54.123+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T21:21:54.152+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T21:21:54.226+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T21:21:54.353+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T21:21:54.431+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T21:21:54.492+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T21:21:54.518+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T21:21:54.626+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T21:21:54.646+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T21:21:54.655+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 1.659 seconds (process running for 12384.661)
+2026-02-14T21:21:54.658+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-14T22:31:25.143+05:30  WARN 7568 --- [BankAppv2] [HikariPool-23:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Thread starvation or clock leap detected (housekeeper delta=1h9m31s317ms231µs100ns).
+2026-02-14T22:35:45.833+05:30  INFO 7568 --- [BankAppv2] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-14T22:35:45.835+05:30  INFO 7568 --- [BankAppv2] [Thread-90] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14T22:35:45.865+05:30  INFO 7568 --- [BankAppv2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-14T22:35:45.867+05:30  INFO 7568 --- [BankAppv2] [Thread-90] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T22:35:45.867+05:30  INFO 7568 --- [BankAppv2] [Thread-90] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
+2026-02-14T22:35:45.870+05:30  INFO 7568 --- [BankAppv2] [Thread-90] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+2026-02-14T22:35:45.946+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T22:35:45.947+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T22:35:46.059+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T22:35:46.069+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 3 JPA repository interfaces.
+2026-02-14T22:35:46.143+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T22:35:46.143+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T22:35:46.143+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T22:35:46.151+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T22:35:46.151+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 203 ms
+2026-02-14T22:35:46.189+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T22:35:46.190+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2026-02-14T22:35:46.199+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-24 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49883523
+2026-02-14T22:35:46.199+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2026-02-14T22:35:46.244+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T22:35:46.338+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T22:35:46.349+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T22:35:46.374+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T22:35:46.413+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T22:35:46.448+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T22:35:46.473+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T22:35:46.483+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T22:35:46.525+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T22:35:46.533+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T22:35:46.538+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 0.605 seconds (process running for 16816.545)
+2026-02-14T22:35:46.540+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-02-14T22:38:59.796+05:30  INFO 7568 --- [BankAppv2] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-02-14T22:38:59.798+05:30  INFO 7568 --- [BankAppv2] [Thread-94] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-02-14T22:38:59.819+05:30  INFO 7568 --- [BankAppv2] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-02-14T22:38:59.821+05:30  INFO 7568 --- [BankAppv2] [Thread-94] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T22:38:59.821+05:30  INFO 7568 --- [BankAppv2] [Thread-94] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2026-02-14T22:38:59.824+05:30  INFO 7568 --- [BankAppv2] [Thread-94] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+2026-02-14T22:38:59.899+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Starting BankAppv2Application using Java 17.0.12 with PID 7568 (C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2\target\classes started by VE00YN376 in C:\Users\VE00YN376\Desktop\ymsli\springbootv2\BankAppv2)
+2026-02-14T22:38:59.899+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : No active profile set, falling back to 1 default profile: "default"
+2026-02-14T22:39:00.010+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-02-14T22:39:00.037+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2026-02-14T22:39:00.112+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8096 (http)
+2026-02-14T22:39:00.113+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-02-14T22:39:00.113+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-02-14T22:39:00.120+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.a.c.c.C.[.[localhost].[/bankapp]       : Initializing Spring embedded WebApplicationContext
+2026-02-14T22:39:00.120+05:30  INFO 7568 --- [BankAppv2] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 220 ms
+2026-02-14T22:39:00.153+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-02-14T22:39:00.153+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2026-02-14T22:39:00.162+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-25 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6026e059
+2026-02-14T22:39:00.162+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2026-02-14T22:39:00.205+05:30  INFO 7568 --- [BankAppv2] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-02-14T22:39:00.306+05:30  INFO 7568 --- [BankAppv2] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name bankUserDetailsService
+2026-02-14T22:39:00.317+05:30  WARN 7568 --- [BankAppv2] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-02-14T22:39:00.348+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2026-02-14T22:39:00.389+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-02-14T22:39:00.420+05:30  WARN 7568 --- [BankAppv2] [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2026-02-14T22:39:00.445+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-02-14T22:39:00.455+05:30 DEBUG 7568 --- [BankAppv2] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-02-14T22:39:00.501+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-02-14T22:39:00.508+05:30  INFO 7568 --- [BankAppv2] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8096 (http) with context path '/bankapp'
+2026-02-14T22:39:00.511+05:30  INFO 7568 --- [BankAppv2] [restartedMain] com.bankappv2.BankAppv2Application       : Started BankAppv2Application in 0.628 seconds (process running for 17010.518)
+2026-02-14T22:39:00.512+05:30  INFO 7568 --- [BankAppv2] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
