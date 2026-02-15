@@ -45,7 +45,6 @@ python3 -m http.server 4173
 ```
 Then open `http://localhost:4173`.
 Landing preview opens with only the Login page. After login, dashboard actions are visible and each button click opens a large professional popup with readable output (not JSON).
-Manager preview includes **All Accounts** row-wise view with per-row **Show Transactions** button that opens an account transactions page sorted by newest timestamp first, with approval status/actions for pending withdrawals.
 
 ## Run
 ```bash
