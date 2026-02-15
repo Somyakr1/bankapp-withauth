@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sena Bank | App Preview</title>
+  <style>
+    :root{--bg:#eef4ff;--card:#fff;--text:#0f172a;--muted:#64748b;--primary:#1d4ed8;--danger:#b91c1c;--success:#166534;--border:#dbeafe;--shadow:0 12px 30px rgba(30,64,175,.14)}
+    *{box-sizing:border-box;font-family:Inter,Segoe UI,Arial,sans-serif} body{margin:0;background:radial-gradient(circle at 10% 10%,#dbeafe 0%,#eff4ff 55%,#e2e8f0 100%);color:var(--text)}
+    .app-shell{min-height:100vh}
+    header{display:none;position:sticky;top:0;z-index:40;background:linear-gradient(135deg,#0f172a,#1e3a8a 70%,#2563eb);color:#fff;padding:14px 22px;box-shadow:0 8px 24px rgba(15,23,42,.35);justify-content:space-between;align-items:center}
+    .brand{display:flex;align-items:center;gap:10px}.brand-dot{width:10px;height:10px;border-radius:50%;background:#93c5fd;box-shadow:0 0 12px #bfdbfe}.brand-text{font-size:24px;font-weight:800}
+    .btn{border:0;border-radius:10px;padding:9px 12px;cursor:pointer;font-weight:700;background:var(--primary);color:#fff}.btn.secondary{background:#334155}.btn.small{padding:7px 10px;font-size:13px}.btn.danger{background:var(--danger)}
+    .login-page{min-height:100vh;display:grid;place-items:center;padding:20px}
+    .login-card{width:min(460px,100%);background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+    .login-card h1{margin:0 0 6px;font-size:28px}.subtitle{margin:0 0 16px;color:var(--muted)}
+    label{display:block;font-size:13px;font-weight:700;color:#475569;margin:8px 0 6px}
+    input,select{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:10px 11px;background:#f8fafc;margin-bottom:6px}
+    .inline-error{background:#fee2e2;color:#991b1b;border:1px solid #fecaca;border-radius:10px;padding:8px 10px;margin-top:10px;font-size:13px;font-weight:600;display:none}
+    .hint{margin-top:10px;color:#64748b;font-size:12px}
+    .dashboard-page,.account-tx-page{display:none;max-width:1280px;margin:0 auto;padding:20px}
+    .welcome{background:linear-gradient(135deg,#1e3a8a,#2563eb 55%,#60a5fa);color:#fff;border-radius:14px;padding:14px;margin-bottom:16px;box-shadow:var(--shadow)}
+    .welcome p{margin:4px 0 0;color:#dbeafe}.role-badge{background:#dbeafe;color:#1e3a8a;border-radius:999px;font-size:12px;font-weight:800;padding:6px 10px;display:inline-block;margin-bottom:12px}
+    .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+    .card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:var(--shadow)} .card h3{margin:0 0 10px;font-size:20px}
+    .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+    table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden}
+    th,td{padding:10px;border-bottom:1px solid #e2e8f0;text-align:left;font-size:13px;vertical-align:top}
+    th{background:#eff6ff;color:#1e3a8a}
+    .status{font-weight:700;padding:4px 8px;border-radius:999px;display:inline-block;font-size:12px}
+    .success{background:#dcfce7;color:#166534}.pending{background:#fef3c7;color:#92400e}.rejected{background:#fee2e2;color:#991b1b}
+    .modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;padding:24px;z-index:999;backdrop-filter:blur(3px)}
+    .modal{width:min(920px,100%);max-height:80vh;overflow:auto;background:#fff;border-radius:18px;box-shadow:0 20px 50px rgba(15,23,42,.35);border:1px solid #c7d2fe}
+    .modal-head{padding:16px 18px;border-bottom:1px solid #e2e8f0;background:linear-gradient(90deg,#eef2ff,#f8fafc);display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .modal-title{margin:0;font-size:22px;color:#1e3a8a}.modal-time{color:#64748b;font-size:12px}
+    .modal-body{padding:18px;font-size:17px;line-height:1.75;color:#1f2937}.modal-body ul{margin:8px 0 0 0;padding-left:22px}
+    .success-line{color:#166534;font-weight:700}
+  </style>
+</head>
+<body>
+<div class="app-shell">
+  <header id="appHeader">
+    <div class="brand"><span class="brand-dot"></span><span class="brand-text">Sena Bank</span></div>
+    <button class="btn secondary small" onclick="logout()">Logout</button>
+  </header>
+
+  <main id="loginPage" class="login-page">
+    <section class="login-card">
+      <h1>Welcome to Sena Bank</h1><p class="subtitle">Sign in to continue.</p>
+      <label for="username">User Name</label><input id="username" placeholder="Enter username" value="clerk" />
+      <label for="password">Password</label><input id="password" type="password" placeholder="Enter password" value="1234" />
+      <button class="btn" onclick="login()">Login</button>
+      <div class="inline-error" id="loginError">Invalid info entered.</div>
+      <p class="hint">Preview credentials: <strong>clerk</strong> or <strong>manager</strong>.</p>
+    </section>
+  </main>
+
+  <main id="dashboardPage" class="dashboard-page">
+    <section class="welcome"><h2 id="dashboardTitle" style="margin:0;">Dashboard</h2><p id="dashboardSubtitle"></p></section>
+    <span class="role-badge" id="roleBadge">ROLE</span>
+
+    <div id="clerkSection" style="display:none;">
+      <div class="grid">
+        <section class="card">
+          <h3>Account Queries</h3>
+          <label>Account Number</label><input id="clerkAccountId" value="1001" />
+          <div class="row">
+            <button class="btn small" onclick="runAction('All Accounts', ['Showing all accounts available in Sena Bank.'])">All Accounts</button>
+            <button class="btn small" onclick="runAccountAction('Account Details', 'clerkAccountId')">By Account</button>
+            <button class="btn small" onclick="runAccountAction('Account With Transactions', 'clerkAccountId')">With Transactions</button>
+            <button class="btn small" onclick="runAction('Account Summary', ['Total Accounts: 5', 'Total Balance: ₹42,000'])">Summary</button>
+            <button class="btn small" onclick="runAccountAction('Summary by Account Number', 'clerkAccountId')">Summary by Account</button>
+          </div>
+        </section>
+        <section class="card">
+          <h3>Transactions</h3>
+          <label>Deposit Account</label><input id="cDepAcc" value="1001" /><label>Amount</label><input id="cDepAmt" value="500" />
+          <button class="btn small" onclick="runAmountAction('Deposit Processed', 'cDepAcc', 'cDepAmt')">Deposit</button>
+          <label>Withdraw Account</label><input id="cWAcc" value="1001" /><label>Amount</label><input id="cWAmt" value="300" />
+          <button class="btn small" onclick="runAmountAction('Withdrawal Processed', 'cWAcc', 'cWAmt')">Withdraw</button>
+          <label>From Account</label><input id="cFrom" value="1001" /><label>To Account</label><input id="cTo" value="1002" /><label>Amount</label><input id="cTAmt" value="200" />
+          <button class="btn small" onclick="runTransferAction()">Transfer</button>
+        </section>
+      </div>
+    </div>
+
+    <div id="managerSection" style="display:none;">
+      <div class="grid">
+        <section class="card">
+          <h3>Create Clerk + Accounts</h3>
+          <label>New Clerk Username</label><input id="mUser" value="newclerk" /><label>Password</label><input id="mPass" type="password" value="1234" />
+          <button class="btn small" onclick="runAction('Clerk Created', ['New clerk account created.', 'Username: ' + document.getElementById('mUser').value])">Create Clerk</button>
+          <hr />
+          <label>Name</label><input id="mName" value="John Doe" /><label>Balance</label><input id="mBal" value="10000" />
+          <label>Email</label><input id="mEmail" value="john@email.com" /><label>Phone</label><input id="mPhone" value="5551231234" />
+          <button class="btn small" onclick="runAction('Account Added', ['Account added for ' + document.getElementById('mName').value])">Add Account</button>
+          <label>Delete Account Number</label><input id="mDel" value="1001" /><button class="btn small danger" onclick="runAccountAction('Account Deleted', 'mDel')">Delete Account</button>
+        </section>
+
+        <section class="card">
+          <h3>Manager Transactions</h3>
+          <label>Deposit Account</label><input id="mDepAcc" value="1001" /><label>Amount</label><input id="mDepAmt" value="800" />
+          <button class="btn small" onclick="runAmountAction('Manager Deposit Processed', 'mDepAcc', 'mDepAmt')">Deposit</button>
+
+          <label>Withdraw Account</label><input id="mWAcc" value="1001" /><label>Amount</label><input id="mWAmt" value="250" />
+          <button class="btn small" onclick="runAmountAction('Manager Withdrawal Processed', 'mWAcc', 'mWAmt')">Withdraw</button>
+
+          <label>From Account</label><input id="mFrom" value="1001" /><label>To Account</label><input id="mTo" value="1002" /><label>Amount</label><input id="mTAmt" value="400" />
+          <button class="btn small" onclick="runManagerTransferAction()">Transfer</button>
+
+          <hr />
+          <label>Transaction ID</label><input id="mTxId" value="9001" /><label>Account Number for Tx Count</label><input id="mCountId" value="1001" />
+          <div class="row">
+            <button class="btn small" onclick="runAction('All Transactions', ['Showing latest transactions across all accounts.'])">All Transactions</button>
+            <button class="btn small" onclick="runTxById()">Transaction By ID</button>
+            <button class="btn small" onclick="runAction('Transaction Count', ['Account #' + Number(document.getElementById('mCountId').value) + ' has 14 transactions.'])">Transaction Count</button>
+          </div>
+          <label>Approval</label><select id="mApprove"><option value="true">Approve</option><option value="false">Reject</option></select>
+          <button class="btn small" onclick="runAction('Approval Status Updated', ['Transaction #' + Number(document.getElementById('mTxId').value) + ' decision saved.'])">Submit Approval</button>
+        </section>
+      </div>
+
+      <section class="card" style="margin-top:14px;">
+        <h3>All Accounts (Manager View)</h3>
+        <p style="margin-top:0;color:var(--muted)">Click <strong>All Accounts</strong> to load row-wise account details, then use <strong>Show Transactions</strong>.</p>
+        <button class="btn" onclick="loadManagerAccounts()">All Accounts</button>
+        <div id="accountsTableWrap" style="margin-top:12px;display:none;"></div>
+      </section>
+    </div>
+  </main>
+
+  <main id="accountTxPage" class="account-tx-page">
+    <section class="welcome">
+      <h2 style="margin:0;">Account With Transactions</h2>
+      <p>Simulates <strong>getAccountWithTx</strong> response.</p>
+    </section>
+    <section class="card">
+      <h3>Account Details</h3>
+      <div id="selectedAccountDetails"></div>
+      <button class="btn secondary small" onclick="backToManagerDashboard()" style="margin-top:10px;">Back to Manager Dashboard</button>
+    </section>
+    <section class="card" style="margin-top:14px;">
+      <h3>Transactions (Newest First)</h3>
+      <table>
+        <thead><tr><th>Txn ID</th><th>Time</th><th>Type</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody id="txTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+</div>
+
+<div id="outputModal" class="modal-overlay" onclick="closeModal(event)">
+  <section class="modal">
+    <div class="modal-head"><div><h3 id="modalTitle" class="modal-title">Action Result</h3><div id="modalTime" class="modal-time"></div></div><button class="btn secondary small" onclick="closeModal()">Close</button></div>
+    <div class="modal-body" id="modalBody"></div>
+  </section>
+</div>
+
+<script>
+  const managerAccounts = [
+    { id: 1001, name: 'Ava', email: 'ava@mail.com', phone: '5551010', balance: 5100, tx: [
+      { id: 9010, time: '2026-02-14 19:05', type: 'WITHDRAW', amount: 280000, status: 'PENDING_APPROVAL' },
+      { id: 9008, time: '2026-02-14 18:15', type: 'DEPOSIT', amount: 500, status: 'SUCCESS' },
+      { id: 9001, time: '2026-02-14 17:00', type: 'TRANSFER_OUT', amount: 200, status: 'SUCCESS' }
+    ]},
+    { id: 1002, name: 'Noah', email: 'noah@mail.com', phone: '5552020', balance: 8400, tx: [
+      { id: 9020, time: '2026-02-14 18:40', type: 'TRANSFER_IN', amount: 200, status: 'SUCCESS' },
+      { id: 9018, time: '2026-02-14 18:10', type: 'WITHDRAW', amount: 100, status: 'SUCCESS' }
+    ]}
+  ];
+
+  function showModal(title, lines){
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalTime').textContent = `Updated at ${new Date().toLocaleTimeString()}`;
+    document.getElementById('modalBody').innerHTML = '<div class="success-line">Action completed.</div><ul>' + lines.map(l=>`<li>${l}</li>`).join('') + '</ul>';
+    document.getElementById('outputModal').style.display = 'flex';
+  }
+  function closeModal(e){ if(!e || e.target.id==='outputModal'){ document.getElementById('outputModal').style.display='none'; } }
+  function invalidOutput(){ showModal('Invalid Information',['Invalid info entered.','Please verify account number and amount values.']); }
+
+  function login(){
+    const username=(document.getElementById('username').value||'').trim().toLowerCase();
+    const password=(document.getElementById('password').value||'').trim();
+    const err=document.getElementById('loginError');
+    if(!username||!password){err.style.display='block';return;}
+    if(username==='clerk'){err.style.display='none';enterDashboard('ROLE_CLERK');}
+    else if(username==='manager'||username==='mgr'){err.style.display='none';enterDashboard('ROLE_MGR');}
+    else{err.style.display='block';}
+  }
+
+  function enterDashboard(role){
+    document.getElementById('loginPage').style.display='none';
+    document.getElementById('accountTxPage').style.display='none';
+    document.getElementById('dashboardPage').style.display='block';
+    document.getElementById('appHeader').style.display='flex';
+    document.getElementById('roleBadge').textContent=role;
+    if(role==='ROLE_MGR') renderManager(); else renderClerk();
+    showModal('Login Successful',[`Authenticated as ${role}.`, role==='ROLE_MGR'?'Redirected to Manager Dashboard.':'Redirected to Clerk Dashboard.']);
+  }
+
+  function renderClerk(){
+    document.getElementById('dashboardTitle').textContent='Clerk Dashboard';
+    document.getElementById('dashboardSubtitle').textContent='Clerk actions: account queries, deposit, withdraw, transfer.';
+    document.getElementById('roleBadge').textContent='ROLE_CLERK';
+    document.getElementById('clerkSection').style.display='block';
+    document.getElementById('managerSection').style.display='none';
+  }
+
+  function renderManager(){
+    document.getElementById('dashboardTitle').textContent='Manager Dashboard';
+    document.getElementById('dashboardSubtitle').textContent='Manager actions with account-level transaction review and approvals.';
+    document.getElementById('roleBadge').textContent='ROLE_MGR';
+    document.getElementById('clerkSection').style.display='none';
+    document.getElementById('managerSection').style.display='block';
+  }
+
+  function logout(){
+    document.getElementById('dashboardPage').style.display='none';
+    document.getElementById('accountTxPage').style.display='none';
+    document.getElementById('appHeader').style.display='none';
+    document.getElementById('loginPage').style.display='grid';
+    document.getElementById('username').value='';document.getElementById('password').value='';
+    document.getElementById('loginError').style.display='none';
+    document.getElementById('outputModal').style.display='none';
+  }
+
+  function runAction(title, lines){ showModal(title, lines); }
+  function getNum(id){ return Number(document.getElementById(id).value); }
+
+  function runAccountAction(title,idField){ const id=getNum(idField); if(!id||id<=0) return invalidOutput(); runAction(title,[`Account Number: ${id}`,'Request validated successfully.']); }
+  function runAmountAction(title,accField,amtField){ const accountId=getNum(accField); const amount=getNum(amtField); if(!accountId||accountId<=0||!amount||amount<=0) return invalidOutput(); runAction(title,[`Account: ${accountId}`,`Amount: ₹${amount.toLocaleString()}`,'Transaction status: SUCCESS']); }
+  function runTransferAction(){ const f=getNum('cFrom'), t=getNum('cTo'), a=getNum('cTAmt'); if(!f||!t||f<=0||t<=0||a<=0) return invalidOutput(); runAction('Transfer Successful',[`From: ${f}`,`To: ${t}`,`Amount: ₹${a.toLocaleString()}`]); }
+function runManagerTransferAction(){ const f=getNum('mFrom'), t=getNum('mTo'), a=getNum('mTAmt'); if(!f||!t||f<=0||t<=0||a<=0) return invalidOutput(); runAction('Manager Transfer Successful',[`From: ${f}`,`To: ${t}`,`Amount: ₹${a.toLocaleString()}`,'Transfer completed with manager privileges.']); }
+  function runTxById(){ const id=getNum('mTxId'); if(!id||id<=0) return invalidOutput(); runAction('Transaction Details',[`Transaction ID: ${id}`,'Type: WITHDRAW','Amount: ₹250','Current Status: PENDING_APPROVAL']); }
+
+  function loadManagerAccounts(){
+    const wrap=document.getElementById('accountsTableWrap');
+    wrap.style.display='block';
+    wrap.innerHTML = `<table><thead><tr><th>Account #</th><th>Name</th><th>Email</th><th>Phone</th><th>Balance</th><th>Action</th></tr></thead><tbody>`+
+      managerAccounts.map(a=>`<tr><td>${a.id}</td><td>${a.name}</td><td>${a.email}</td><td>${a.phone}</td><td>₹${a.balance.toLocaleString()}</td><td><button class='btn small' onclick='showTransactions(${a.id})'>Show Transactions</button></td></tr>`).join('')+
+      `</tbody></table>`;
+  }
+
+  function showTransactions(accountId){
+    const acc = managerAccounts.find(a=>a.id===accountId);
+    if(!acc) return invalidOutput();
+
+    document.getElementById('dashboardPage').style.display='none';
+    document.getElementById('accountTxPage').style.display='block';
+
+    document.getElementById('selectedAccountDetails').innerHTML =
+      `<strong>Account #:</strong> ${acc.id}<br/><strong>Name:</strong> ${acc.name}<br/><strong>Email:</strong> ${acc.email}<br/><strong>Phone:</strong> ${acc.phone}<br/><strong>Balance:</strong> ₹${acc.balance.toLocaleString()}`;
+
+    const sortedTx=[...acc.tx].sort((a,b)=> new Date(b.time.replace(' ','T')) - new Date(a.time.replace(' ','T')));
+    document.getElementById('txTableBody').innerHTML = sortedTx.map(tx=>{
+      const statusClass = tx.status==='SUCCESS'?'success':(tx.status==='REJECTED'?'rejected':'pending');
+      const actionCell = tx.status==='PENDING_APPROVAL'
+        ? `<button class='btn small' onclick='approveTx(${accountId},${tx.id},true)'>Approve</button> <button class='btn small danger' onclick='approveTx(${accountId},${tx.id},false)'>Reject</button>`
+        : `<span class='status success'>Processed</span>`;
+      return `<tr><td>${tx.id}</td><td>${tx.time}</td><td>${tx.type}</td><td>₹${tx.amount.toLocaleString()}</td><td><span class='status ${statusClass}'>${tx.status}</span></td><td>${actionCell}</td></tr>`;
+    }).join('');
+  }
+
+  function approveTx(accountId, txId, approve){
+    const acc=managerAccounts.find(a=>a.id===accountId); if(!acc) return;
+    const tx=acc.tx.find(t=>t.id===txId); if(!tx) return;
+    tx.status = approve ? 'SUCCESS' : 'REJECTED';
+    showTransactions(accountId);
+    showModal('Approval Processed',[`Transaction #${txId} has been ${approve?'approved':'rejected'}.`,`Updated status: ${tx.status}`]);
+  }
+
+  function backToManagerDashboard(){
+    document.getElementById('accountTxPage').style.display='none';
+    document.getElementById('dashboardPage').style.display='block';
+    renderManager();
+  }
+</script>
+</body>
+</html>
